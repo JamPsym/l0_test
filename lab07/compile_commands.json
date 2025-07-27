@@ -1,0 +1,77 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-g",
+      "-O0",
+      "-Wall",
+      "-DSTM32L053xx",
+      "-Iinc",
+      "-I../STM32CubeL0/Drivers/CMSIS/Device/ST/STM32L0xx/Include",
+      "-I../STM32CubeL0/Drivers/CMSIS/Include",
+      "-c",
+      "-o",
+      "main.o",
+      "main.c"
+    ],
+    "directory": "/home/pies/l0_test/lab07",
+    "file": "/home/pies/l0_test/lab07/main.c",
+    "output": "/home/pies/l0_test/lab07/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-TSTM32L053C8T_FLASH.ld",
+      "main.o",
+      "system_stm32l0xx.o",
+      "startup_stm32l053xx.o",
+      "-o",
+      "app.elf",
+      "startup_stm32l053xx.s"
+    ],
+    "directory": "/home/pies/l0_test/lab07",
+    "file": "/home/pies/l0_test/lab07/startup_stm32l053xx.s",
+    "output": "/home/pies/l0_test/lab07/app.elf"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-TSTM32L053C8T_FLASH.ld",
+      "main.o",
+      "system_stm32l0xx.o",
+      "startup_stm32l053xx.o",
+      "-o",
+      "app.elf",
+      "main.c"
+    ],
+    "directory": "/home/pies/l0_test/lab07",
+    "file": "/home/pies/l0_test/lab07/main.c",
+    "output": "/home/pies/l0_test/lab07/app.elf"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m0plus",
+      "-mthumb",
+      "-TSTM32L053C8T_FLASH.ld",
+      "main.o",
+      "system_stm32l0xx.o",
+      "startup_stm32l053xx.o",
+      "-o",
+      "app.elf",
+      "system_stm32l0xx.c"
+    ],
+    "directory": "/home/pies/l0_test/lab07",
+    "file": "/home/pies/l0_test/lab07/system_stm32l0xx.c",
+    "output": "/home/pies/l0_test/lab07/app.elf"
+  }
+]

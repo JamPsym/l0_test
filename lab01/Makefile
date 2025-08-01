@@ -52,7 +52,10 @@ clean:
 submodules:
 	git submodule update --init --recursive
 
-.PHONY: all clean submodules
+flash: app.elf
+	gdb-multiarch -ex 'target extended-remote localhost:4242' -ex 'load' -ex 'monitor reset halt' -ex 'monitor flash write_image erase' -ex 'monitor reset' -ex 'quit' app.elf
+
+.PHONY: all clean submodules flash
 
 gdb: app.elf
-	gdb-multiarch -ex 'target extended-remote localhost:4242' -ex 'load' -ex 'break main' -ex 'continue' app.elf
+	gdb-multiarch -ex 'target extended-remote localhost:4242' -ex 'load' -ex 'break main' -ex 'svd_load STM32L053.svd' -ex 'continue' app.elf

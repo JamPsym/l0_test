@@ -1,0 +1,12 @@
+lab1-2:
+
+Sprzętowe miganie diodą:
+
+- Ustawienie PA5 w trybie alternatywnym dla wyjścia OC1 timera TIM2.
+- Konfiguracja prescalera TIM2 tak aby zliczał z okresem 1ms.
+- Ustawienie OC1 do zliczania na zadany okres (ustawienie ARR na liczbę ms).
+- Włączenie wyjścia OC1 () i samego zegara TIM2 (CEN).
+
+Sprzętowa jasność PWM dla diody:
+
+Zliczanie długości impulsu:
